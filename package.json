@@ -1,0 +1,52 @@
+{
+    "name": "@lesnoypudge/eslint-base-config",
+    "version": "1.0.0",
+    "description": "lesnoypudge's eslint-base-config",
+    "main": "eslint.config.js",
+    "type": "module",
+    "scripts": {
+        "codeStyle:check": "npx eslint .",
+        "codeStyle:fix": "npx eslint . --fix",
+        "formatter:config": "npx formatter-config",
+        "deploy": "git add . && git commit -m 'update' && git push && git status",
+        "publish": "npm publish --access public",
+        "generate": "deno run -A generate.ts"
+    },
+    "keywords": [
+        "lesnoypudge",
+        "eslint",
+        "config",
+        "base"
+    ],
+    "author": "LesnoyPudge",
+    "license": "ISC",
+    "dependencies": {
+        "@eslint/js": "^9.3.0",
+        "@stylistic/eslint-plugin": "^2.1.0",
+        "@typescript-eslint/parser": "^7.10.0",
+        "confusing-browser-globals": "^1.0.11",
+        "eslint": "^9.3.0",
+        "eslint-plugin-jsdoc": "^48.2.5",
+        "eslint-plugin-only-warn": "^1.1.0",
+        "eslint-plugin-prefer-arrow-functions": "^3.3.2",
+        "eslint-plugin-tsdoc": "^0.2.17",
+        "globals": "^15.3.0",
+        "typescript-eslint": "^7.10.0"
+    },
+    "devDependencies": {
+        "@lesnoypudge/formatter-config": "^1.0.5",
+        "@types/confusing-browser-globals": "^1.0.3",
+        "@types/eslint__js": "^8.42.3",
+        "@types/node": "^20.12.12",
+        "prettier": "3.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    },
+    "overrides": {
+        "eslint": "^9.3.0",
+        "typescript": "^5.4.5"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
+}
