@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/eslint-base-config",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "lesnoypudge's eslint-base-config",
     "main": "eslint.config.js",
     "type": "module",
@@ -21,6 +21,7 @@
     "author": "LesnoyPudge",
     "license": "ISC",
     "dependencies": {
+        "@eslint/compat": "^1.0.1",
         "@eslint/js": "^9.3.0",
         "@stylistic/eslint-plugin": "^2.1.0",
         "@typescript-eslint/parser": "^7.10.0",
@@ -28,7 +29,7 @@
         "eslint": "^9.3.0",
         "eslint-plugin-jsdoc": "^48.2.5",
         "eslint-plugin-only-warn": "^1.1.0",
-        "eslint-plugin-prefer-arrow-functions": "^3.3.2",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
         "eslint-plugin-tsdoc": "^0.2.17",
         "globals": "^15.3.0",
         "typescript-eslint": "^7.10.0"
@@ -45,8 +46,5 @@
     "overrides": {
         "eslint": "^9.3.0",
         "typescript": "^5.4.5"
-    },
-    "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown"
     }
 }
