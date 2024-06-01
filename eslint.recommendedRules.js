@@ -52,7 +52,7 @@ export const recommendedRulesConfig = tseslint.config(
             '@stylistic/max-len': ['error', { 'code': 80 }],
             '@stylistic/indent': 'off',
             // '@typescript-eslint/indent': ['warn', 4],
-            'indent': ['warn', 4],
+            // 'indent': ['warn', 4],
             '@stylistic/no-multiple-empty-lines': [
                 'warn',
                 {
@@ -77,6 +77,15 @@ export const recommendedRulesConfig = tseslint.config(
                 typescript: true,
                 node: true,
             },
+        },
+    },
+    {
+        files: ['**/*.js', '**/*.jsx'],
+        plugins: {
+            '@stylistic/js': stylisticPluginJS,
+        },
+        rules: {
+            '@stylistic/indent': ['warn', 4],
         },
     },
 );
