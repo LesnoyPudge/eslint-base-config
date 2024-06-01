@@ -6,6 +6,7 @@ import preferArrowPlugin from 'eslint-plugin-prefer-arrow';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import * as importPlugin from 'eslint-plugin-import';
 import { fixupPluginRules } from '@eslint/compat';
+import stylisticPluginJS from "@stylistic/eslint-plugin-js";
 
 
 
@@ -44,7 +45,12 @@ export const recommendedRulesConfig = tseslint.config(
         semi: true,
     }),
     {
+        // plugins: {
+        //     '@stylistic/js': stylisticPluginJS,
+        // },
         rules: {
+            '@stylistic/max-len': ['error', { 'code': 80 }],
+            // '@stylistic/js/max-len': ['error', { 'code': 80 }],
             '@stylistic/indent': 'off',
             '@typescript-eslint/indent': ['warn', 4],
             '@stylistic/no-multiple-empty-lines': [

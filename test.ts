@@ -20,8 +20,13 @@ const some = <
     function name() {
 
     }
+    
     const wow = (...p: any) => {};
     const wow2 = () => 5;
 
     wow(wow2());
+
+    const longfunctionnameqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq = () => {
+
+    }
 };
