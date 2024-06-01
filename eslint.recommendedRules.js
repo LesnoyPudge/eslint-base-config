@@ -39,12 +39,14 @@ export const recommendedRulesConfig = tseslint.config(
         flat: true,
         indent: 4,
         jsx: true,
-        quoteProps: 'as-needed',
+        quoteProps: 'consistent',
         quotes: 'single',
         semi: true,
     }),
     {
         rules: {
+            '@stylistic/indent': 'off',
+            '@typescript-eslint/indent': ['warn', 4],
             '@stylistic/no-multiple-empty-lines': [
                 'warn',
                 {

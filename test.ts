@@ -8,7 +8,13 @@ type Wow = {
 };
 
 
-const some = () => {
+const some = <
+    _Key,
+    _Some,
+>(
+    some: _Some,
+    key: _Key,
+) => {
     console.log('wow');
     const o = { wow: 'sdfsdfsdf', wow2: 'qweqweqweqwe', qwe: 'qweqweqwee' };
     function name() {
