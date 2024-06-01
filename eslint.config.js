@@ -5,6 +5,7 @@ import tseslint from 'typescript-eslint';
 import { languageOptionsConfig } from './eslint.languageOptionsConfig.js';
 import { recommendedRulesConfig } from './eslint.recommendedRules.js';
 import 'eslint-plugin-only-warn';
+import tsParser from '@typescript-eslint/parser'
 
 export default tseslint.config(
     tseslint.configs.base,
@@ -21,6 +22,14 @@ export default tseslint.config(
             '**/build/**',
             '**/*.generated.*',
         ],
+        // languageOptions: {
+        //     parser: tsParser,
+        //     parserOptions: {
+        //         ecmaFeatures: { modules: true },
+        //         ecmaVersion: 'latest',
+        //         project: './tsconfig.json',
+        //     },
+        // },
     },
 
     {

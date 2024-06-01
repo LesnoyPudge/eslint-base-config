@@ -2,7 +2,7 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "never",
-        "source.fixAll": "never"
+        "source.fixAll": "always"
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "eslint.experimental.useFlatConfig": true,

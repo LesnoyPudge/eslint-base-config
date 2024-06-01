@@ -4,7 +4,8 @@ import tseslint from 'typescript-eslint';
 import eslint from '@eslint/js';
 import preferArrowPlugin from 'eslint-plugin-prefer-arrow';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-// import { fixupPluginRules } from '@eslint/compat';
+import * as importPlugin from 'eslint-plugin-import';
+import { fixupPluginRules } from '@eslint/compat';
 
 
 
@@ -14,7 +15,7 @@ export const recommendedRulesConfig = tseslint.config(
     ...tseslint.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
-    ...tseslint.config({
+    {
         plugins: {
             'prefer-arrow': preferArrowPlugin,
         },
@@ -28,7 +29,7 @@ export const recommendedRulesConfig = tseslint.config(
                 },
             ],
         },
-    }),
+    },
     stylisticPlugin.configs['disable-legacy'],
     stylisticPlugin.configs.customize({
         arrowParens: true,
@@ -42,7 +43,7 @@ export const recommendedRulesConfig = tseslint.config(
         quotes: 'single',
         semi: true,
     }),
-    ...tseslint.config({
+    {
         rules: {
             '@stylistic/no-multiple-empty-lines': [
                 'warn',
@@ -55,5 +56,19 @@ export const recommendedRulesConfig = tseslint.config(
             // '@stylistic/ts/member-delimiter-style': "error"
             '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
         },
-    }),
+    },
+    {
+        plugins: {
+            import: importPlugin,
+        },
+        rules: {
+            'import/no-extraneous-dependencies': 'error',
+        },
+        settings: {
+            'import/resolver': {
+                typescript: true,
+                node: true,
+            },
+        },
+    },
 );
