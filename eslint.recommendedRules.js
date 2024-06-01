@@ -49,8 +49,9 @@ export const recommendedRulesConfig = tseslint.config(
         //     '@stylistic/js': stylisticPluginJS,
         // },
         rules: {
-            '@stylistic/max-len': ['error', { 'code': 80 }],
+            '@stylistic/max-len': ['warn', { 'code': 80 }],
             '@stylistic/indent': 'off',
+            '@stylistic/js/eol-last': ['warn', 'never'],
             // '@typescript-eslint/indent': ['warn', 4],
             // 'indent': ['warn', 4],
             '@stylistic/no-multiple-empty-lines': [
