@@ -1,6 +1,6 @@
 {
     "name": "@lesnoypudge/eslint-base-config",
-    "version": "1.8.0",
+    "version": "1.8.1",
     "description": "lesnoypudge's eslint-base-config",
     "main": "config.js",
     "type": "module",

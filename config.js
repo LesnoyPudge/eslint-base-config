@@ -19,6 +19,7 @@ export const eslintConfigBase = tseslint.config(
             '**/coverage/**',
             '**/build/**',
             '**/*.generated.*',
+            '**/*.d.ts',
         ],
         // languageOptions: {
         //     parser: tsParser,
