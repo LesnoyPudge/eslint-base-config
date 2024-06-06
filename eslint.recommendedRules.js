@@ -71,7 +71,8 @@ export const recommendedRulesConfig = tseslint.config(
             // '@stylistic/jsx-one-expression-per-line': ['warn', {
             //     allow: 'single-line',
             // }],
-            '@stylistic/jsx-one-expression-per-line': 'off'
+            '@stylistic/jsx-one-expression-per-line': 'off',
+            '@typescript-eslint/no-confusing-void-expression': 'off'
         },
     },
     {
