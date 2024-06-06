@@ -1,12 +1,12 @@
 {
     "name": "@lesnoypudge/eslint-base-config",
-    "version": "1.7.1",
+    "version": "1.8.0",
     "description": "lesnoypudge's eslint-base-config",
-    "main": "eslint.config.js",
+    "main": "config.js",
     "type": "module",
     "scripts": {
-        "codeStyle:check": "npx eslint .",
-        "codeStyle:fix": "npx eslint . --fix",
+        "lint:check": "npx eslint .",
+        "lint:fix": "npx eslint . --fix",
         "formatter:config": "npx formatter-config",
         "deploy": "git add . && git commit -m 'update' && git push && git status",
         "publish": "npm publish --access public",
@@ -37,7 +37,9 @@
         "typescript-eslint": "^7.11.0"
     },
     "devDependencies": {
+        "@lesnoypudge/eslint-react-config": "^2.0.1",
         "@lesnoypudge/formatter-config": "^1.0.5",
+        "@lesnoypudge/types-global-react": "^2.0.1",
         "@types/confusing-browser-globals": "^1.0.3",
         "@types/eslint__js": "^8.42.3",
         "@types/node": "^20.13.0",

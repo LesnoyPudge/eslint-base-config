@@ -6,9 +6,12 @@ import preferArrowPlugin from 'eslint-plugin-prefer-arrow';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import * as importPlugin from 'eslint-plugin-import';
 import { fixupPluginRules } from '@eslint/compat';
-import stylisticPluginJS from "@stylistic/eslint-plugin-js";
+import stylisticPluginJS from '@stylistic/eslint-plugin-js';
+import restrictedGlobals from 'confusing-browser-globals';
 
 
+
+const INDENT = 4;
 
 export const recommendedRulesConfig = tseslint.config(
     eslint.configs.recommended,
@@ -38,7 +41,7 @@ export const recommendedRulesConfig = tseslint.config(
         braceStyle: '1tbs',
         commaDangle: 'always-multiline',
         flat: true,
-        indent: 4,
+        indent: INDENT,
         jsx: true,
         quoteProps: 'consistent',
         quotes: 'single',
@@ -52,7 +55,7 @@ export const recommendedRulesConfig = tseslint.config(
             '@stylistic/max-len': ['warn', { 'code': 80 }],
             '@stylistic/indent': 'off',
             '@stylistic/eol-last': ['warn', 'never'],
-            // '@typescript-eslint/indent': ['warn', 4],
+            // '@typescript-eslint/indent': ['warn', INDENT],
             // 'indent': ['warn', 4],
             '@stylistic/no-multiple-empty-lines': [
                 'warn',
@@ -64,6 +67,11 @@ export const recommendedRulesConfig = tseslint.config(
             ],
             // '@stylistic/ts/member-delimiter-style': "error"
             '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+            'no-restricted-globals': ['warn', ...restrictedGlobals],
+            // '@stylistic/jsx-one-expression-per-line': ['warn', {
+            //     allow: 'single-line',
+            // }],
+            '@stylistic/jsx-one-expression-per-line': 'off'
         },
     },
     {
@@ -86,7 +94,7 @@ export const recommendedRulesConfig = tseslint.config(
             '@stylistic/js': stylisticPluginJS,
         },
         rules: {
-            '@stylistic/indent': ['warn', 4],
+            '@stylistic/indent': ['warn', INDENT],
         },
     },
 );

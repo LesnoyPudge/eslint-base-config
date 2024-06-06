@@ -20,7 +20,7 @@ const some = <
     function name() {
 
     }
-    
+
     const wow = (...p: any) => {};
     const wow2 = () => 5;
 
@@ -28,14 +28,5 @@ const some = <
 
     const longfunctionnameqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq = () => {
 
-    }
-};
-
-type ContextSelectable<_Value> = {
-    Provider: React.FC<
-        React.ProviderProps<
-            InternalContextSelectableValue<_Value>
-        >
-    >;
-    displayName?: string;
+    };
 };
